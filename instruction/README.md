@@ -19,7 +19,7 @@ The following material is required to complete the lab:
 ## References
 
 - Xilinx FPGA datasheets (available at http://www.xilinx.com)
-- Software Manual (available at http://www.support.xilinx.com)
+- Software Manual (available at https://www.xilinx.com/support.html)
 
 ## Introduction
 
@@ -52,14 +52,14 @@ One of the complications comes from the fact that the switch will not close sync
 2. **Single pulse generation when pressing the push button:**
 A second problem comes from the fact that when one presses the push-button for a short moment, the time that the switch will be closed is usually much longer (msec range) than one clock period (microseconds or even nanoseconds). As a result, our digital lock (or any other finite state machine) will think that we are supplying a string of ones as the input. Thus, one needs to add a circuit after each push-button switch that will generate only one pulse every time that one presses the push-button, independent of the time one keeps the button pressed. Figure 8.1 shows the timing diagram of the push button switch where signal BUTTON is generated asynchronously while signal BUTTON_DEBOUNCED is a pulse that is in sync with the clock signal and lasts for only one clock period. Notice that the pulse BUTTON_DEBOUNCED is synchronized with the falling edge of the clock. This makes sure if this pulse is used as the input to another sequential circuit (in our case, digital lock FSM) or another flip-flop that is clocked at the positive clock edge, the set-up and hold times will be respected.
 
-![Timing diagram of the debounced push button switch](./img/lab10_digram_1.png)
+![Timing diagram of the debounced push button switch](./img/lab10_diagram_1.png)
 
 Figure 10.1 Timing diagram of the debounced push button switch 
 
 The overall digital lock system is shown in Figure 10.2. It consists of the core FSM for the lock, together with the debouncer/synchronizer circuit for each push button input. The LEDs block is used to display the number of each state or the Alarm (A) and Unlock (U) states.
 
 
-![System block diagram for the digital lock](./img/lab10_digram_2.png)
+![System block diagram for the digital lock](./img/lab10_diagram_2.png)
 
 Figure 10.2 System block diagram for the digital lock
 
