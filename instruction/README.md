@@ -96,3 +96,8 @@ Check the operation of the digital lock and observe the UNLOCK, ALARM and state 
 - W-S-S-W-E: Reset
 
 If the system does not work properly check your state diagram and other circuits. Also check the constraint file and verify that your pins are being assigned to the proper pin locations. In case of design modification, implement the circuit again and download the latest version. When the circuit works successfully, prepare to give a demo to your instructor.
+
+:point_right: **Task 5:** 
+
+Create a video demo showing the proper functionality of your design running on the dev board.
+
