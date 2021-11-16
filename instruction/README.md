@@ -73,7 +73,7 @@ Figure 10.2 System block diagram for the digital lock
 **Make your pin assignments:**  
 
 - You will display the UNLOCK, ALARM, and state number signals on the LEDs.
-- Use push buttons for the reset signal and the three inputs: N (Reset), E (PB1), S (PB2), W (PB3)
+- Use push buttons for to get input from the user
 
 Check the operation of the digital lock and observe the UNLOCK, ALARM and state signals. Check as many possible key sequences as possible to prove that the lock works properly under all conditions. Check for instance following sequences:
 
